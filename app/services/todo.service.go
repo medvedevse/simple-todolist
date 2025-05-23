@@ -19,7 +19,7 @@ func CreateTask(c *fiber.Ctx) error {
 	}
 
 	err := database.DB.QueryRow(context.Background(),
-		"INSERT INTO tasks(title, description, status) VALUES ($1, $2, $3, $4, $5) RETURNING id",
+		"INSERT INTO tasks(title, description, status, created_at, updated_at) VALUES ($1, $2, $3, $4, $5) RETURNING id",
 		t.Title, t.Description, t.Status, t.CreatedAt, t.UpdatedAt).Scan(&t.ID)
 	if err != nil {
 		log.Println("Ошибка при создании задачи:", err)

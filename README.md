@@ -1,6 +1,5 @@
 # simple-todolist
-Стек: Fiber, pgx, PostgreSQL
+Стек: Fiber, pgx, PostgreSQL, Docker, docker-compose
 1. git clone https://github.com/medvedevse/simple-todolist.git
-2. Установить зависимости go mod tidy
-3. Создать локально .env (переменные указаны в .env.example)
-4. Запустить проект go run main.go
+2. Создать локально .env (переменные указаны в .env.example)
+3. Запустить проект docker-compose up -d
